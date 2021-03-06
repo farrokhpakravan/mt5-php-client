@@ -1,0 +1,53 @@
+{
+    "name": "farrokhpakravan/mt5-php-client",
+    "description": "Nothing.",
+    "keywords": [
+        "farrokhpakravan",
+        "mt5-php-client"
+    ],
+    "homepage": "https://example.ir/dev/mt5-php-client",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "فرخ_پاکروان",
+            "email": "farrokhpakravan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "farrokhpakravan\\Mt5PhpClient\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "farrokhpakravan\\Mt5PhpClient\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "farrokhpakravan\\Mt5PhpClient\\Mt5PhpClientServiceProvider"
+            ],
+            "aliases": {
+                "Mt5PhpClient": "farrokhpakravan\\Mt5PhpClient\\Mt5PhpClientFacade"
+            }
+        }
+    }
+}
